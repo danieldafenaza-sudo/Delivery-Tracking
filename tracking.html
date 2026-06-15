@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tracking | Delivery Tracking</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span>Delivery</span>Tracking
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="input.html">Input Data</a></li>
+        <li><a href="data.html">Data Delivery</a></li>
+        <li><a href="tracking.html" class="active">Tracking</a></li>
+        <li><a href="update.html">Update Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page tracking-page">
+
+    <!-- HERO TRACKING -->
+    <section class="tracking-hero">
+      <div class="tracking-hero-content">
+        <p class="badge">Live Tracking</p>
+        <h1>Cek Status Pengiriman</h1>
+        <p>
+          Masukkan <strong>ID Delivery</strong> untuk melihat status paket,
+          lokasi terakhir, data pengirim, penerima, dan kurir yang menangani pengiriman.
+        </p>
+      </div>
+
+      <div class="tracking-hero-card">
+        <span>🚚</span>
+        <h3>Delivery Progress</h3>
+        <p>Lacak proses pengiriman secara visual</p>
+      </div>
+    </section>
+
+    <!-- TRACKING SECTION -->
+    <section class="tracking-section premium-tracking-section">
+
+      <div class="search-box premium-search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Masukkan ID Delivery, contoh: D001"
+        />
+
+        <button id="searchBtn">
+          Cari Delivery
+        </button>
+      </div>
+
+      <div id="trackingResult" class="tracking-result premium-tracking-result">
+        <div class="empty-tracking">
+          <div class="empty-icon">📦</div>
+          <h3>Belum ada data tracking</h3>
+          <p>Masukkan ID Delivery untuk melihat perjalanan paket.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Kelompok 13 | Delivery Tracking Sederhana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

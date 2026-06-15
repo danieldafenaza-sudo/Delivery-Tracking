@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Input Data | Delivery Tracking</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span>Delivery</span>Tracking
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="input.html" class="active">Input Data</a></li>
+        <li><a href="data.html">Data Delivery</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="update.html">Update Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page input-page">
+
+    <!-- HERO INPUT -->
+    <section class="input-hero">
+      <div class="input-hero-content">
+        <p class="badge">Form Input Delivery</p>
+        <h1>Input Data Pengiriman Barang</h1>
+        <p>
+          Masukkan data pengiriman secara lengkap mulai dari data barang,
+          pengirim, kurir, hingga penerima. Data akan dikirim ke database
+          Google Sheet <strong>tb_delivery</strong>.
+        </p>
+      </div>
+
+      <div class="input-hero-card">
+        <span class="hero-icon">📦</span>
+        <h3>Delivery System</h3>
+        <p>Kelompok 13</p>
+      </div>
+    </section>
+
+    <!-- FORM INPUT DELIVERY -->
+    <section class="form-section premium-form-section">
+      <form id="deliveryForm" class="delivery-form premium-form">
+
+        <!-- SECTION 1 -->
+        <div class="form-title full">
+          <span>01</span>
+          <div>
+            <h2>Informasi Delivery</h2>
+            <p>Data utama pengiriman barang.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="id_delivery">ID Delivery</label>
+          <input type="text" id="id_delivery" placeholder="Contoh: D004" required />
+        </div>
+
+        <div class="form-group">
+          <label for="nama_barang">Nama Barang</label>
+          <input type="text" id="nama_barang" placeholder="Contoh: Laptop" required />
+        </div>
+
+        <div class="form-group">
+          <label for="berat_barang">Berat Barang</label>
+          <input type="text" id="berat_barang" placeholder="Contoh: 2 Kg" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal_kirim">Tanggal Kirim</label>
+          <input type="date" id="tanggal_kirim" required />
+        </div>
+
+        <div class="form-group">
+          <label for="estimasi_sampai">Estimasi Sampai</label>
+          <input type="date" id="estimasi_sampai" required />
+        </div>
+
+        <div class="form-group">
+          <label for="status_delivery">Status Delivery</label>
+          <select id="status_delivery" required>
+            <option value="">Pilih Status</option>
+            <option value="Diproses">Diproses</option>
+            <option value="Dikirim">Dikirim</option>
+            <option value="Dalam Perjalanan">Dalam Perjalanan</option>
+            <option value="Sampai">Sampai</option>
+            <option value="Dibatalkan">Dibatalkan</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="lokasi_terakhir">Lokasi Terakhir</label>
+          <input type="text" id="lokasi_terakhir" placeholder="Contoh: Gudang Sigli / Jalan Banda Aceh" required />
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="form-title full">
+          <span>02</span>
+          <div>
+            <h2>Data Pengirim</h2>
+            <p>Informasi orang yang mengirim barang.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nama_pengirim">Nama Pengirim</label>
+          <input type="text" id="nama_pengirim" placeholder="Masukkan nama pengirim" required />
+        </div>
+
+        <div class="form-group">
+          <label for="no_hp_pengirim">No HP Pengirim</label>
+          <input type="text" id="no_hp_pengirim" placeholder="Contoh: 081234567890" required />
+        </div>
+
+        <div class="form-group full">
+          <label for="alamat_pengirim">Alamat Pengirim</label>
+          <textarea id="alamat_pengirim" placeholder="Masukkan alamat lengkap pengirim" required></textarea>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="form-title full">
+          <span>03</span>
+          <div>
+            <h2>Data Kurir</h2>
+            <p>Informasi kurir yang menangani pengiriman.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="kurir">Nama Kurir</label>
+          <select id="kurir" required>
+            <option value="">Pilih Kurir</option>
+            <option value="Fahmi">Fahmi</option>
+            <option value="Rizal">Rizal</option>
+            <option value="Ilham">Ilham</option>
+            <option value="Hafiz">Hafiz</option>
+            <option value="Rahmat">Rahmat</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="no_hp_kurir">No HP Kurir</label>
+          <input type="text" id="no_hp_kurir" placeholder="Contoh: 081111111111" required />
+        </div>
+
+        <div class="form-group full">
+          <label for="catatan">Catatan</label>
+          <textarea id="catatan" placeholder="Contoh: Paket harus dikirim sebelum sore"></textarea>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="form-title full">
+          <span>04</span>
+          <div>
+            <h2>Data Penerima</h2>
+            <p>Informasi orang yang menerima barang.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nama_penerima">Nama Penerima</label>
+          <input type="text" id="nama_penerima" placeholder="Masukkan nama penerima" required />
+        </div>
+
+        <div class="form-group">
+          <label for="no_hp_penerima">No HP Penerima</label>
+          <input type="text" id="no_hp_penerima" placeholder="Contoh: 082345678901" required />
+        </div>
+
+        <div class="form-group full">
+          <label for="alamat_penerima">Alamat Penerima</label>
+          <textarea id="alamat_penerima" placeholder="Masukkan alamat lengkap penerima" required></textarea>
+        </div>
+
+        <!-- ACTION -->
+        <div class="form-action full">
+          <button type="submit" class="btn-submit">Simpan Data Delivery</button>
+          <button type="reset" class="btn-reset">Reset Form</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Kelompok 13 | Delivery Tracking Sederhana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

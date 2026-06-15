@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard | Delivery Tracking</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span>Delivery</span>Tracking
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Dashboard</a></li>
+        <li><a href="input.html">Input Data</a></li>
+        <li><a href="data.html">Data Delivery</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="update.html">Update Progress</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO DASHBOARD -->
+  <main class="page">
+    <section class="dashboard-hero">
+      <div class="dashboard-content">
+        <p class="badge">Kelompok 13</p>
+
+        <h1>Delivery Tracking Sederhana</h1>
+
+        <p>
+          Sistem berbasis web untuk mencatat, mengelola, dan melacak proses
+          pengiriman barang secara sederhana menggunakan database
+          <strong>Google Sheet tb_delivery</strong>.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="input.html" class="btn-primary">Input Data Delivery</a>
+          <a href="tracking.html" class="btn-secondary">Cek Tracking</a>
+        </div>
+      </div>
+
+      <div class="dashboard-panel">
+        <h3>Menu Sistem</h3>
+
+        <a href="input.html" class="menu-card">
+          <div>
+            <h4>Input Data</h4>
+            <p>Tambah data pengiriman baru.</p>
+          </div>
+          <span>→</span>
+        </a>
+
+        <a href="data.html" class="menu-card">
+          <div>
+            <h4>Data Delivery</h4>
+            <p>Lihat seluruh data pengiriman.</p>
+          </div>
+          <span>→</span>
+        </a>
+
+        <a href="tracking.html" class="menu-card">
+          <div>
+            <h4>Tracking</h4>
+            <p>Cek status dan lokasi terakhir paket.</p>
+          </div>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="summary-section compact">
+      <div class="summary-card">
+        <h3>Total Delivery</h3>
+        <p id="totalDelivery">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Diproses</h3>
+        <p id="totalDiproses">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Dalam Perjalanan</h3>
+        <p id="totalPerjalanan">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Sampai</h3>
+        <p id="totalSampai">0</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Kelompok 13 | Delivery Tracking Sederhana</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
